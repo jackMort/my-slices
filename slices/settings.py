@@ -136,9 +136,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'south',
+    'taggit',
     'compressor',
     'debug_toolbar',
     'templatetag_sugar',
+
+    'slices.core',
 )
 
 # A sample logging configuration. The only tangible logging
