@@ -137,11 +137,14 @@ INSTALLED_APPS = (
 
     'south',
     'taggit',
+    'appmedia',
     'compressor',
     'debug_toolbar',
+    'easy_thumbnails',
     'templatetag_sugar',
 
     'slices.core',
+    'slices.types.image',
 )
 
 # A sample logging configuration. The only tangible logging

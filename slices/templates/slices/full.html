@@ -1,0 +1,21 @@
+<div id="{{ slice.id }}" class="slice slice-{{ slice.type_short_name }}">
+    <div class="header">
+        <!--div class="actions" style="float: right">
+            <a class="close" href="#">x</a>
+        </div-->
+        <h4>
+            <span class="id">#{{ slice.id }}</span>
+            {{ slice.added_at }}
+        </h4>
+    </div>
+    <div class="body">
+        {% block content %}{% endblock %}
+    </div>
+    {% if slice.tags.count %}
+        <div class="footer clear">
+            {% for tag in slice.tags.all %}
+            <a href="{{ tag }} ">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

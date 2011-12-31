@@ -1,0 +1,11 @@
+{% extends "slices/full.html" %}
+
+{% load thumbnail %}
+
+{% block content %}
+    <img src="{% thumbnail slice.image.image 275x350 crop upscale sharpen %}" alt="[]"/>
+    {% if slice.image.image_url %}
+        Source: 
+        <span class="source">{{ slice.image.image_url|urlizetrunc:40 }}</span>
+    {% endif %}
+{% endblock %}

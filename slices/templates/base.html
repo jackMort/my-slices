@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0"/>
+        
+        <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" media="all" href="{{ STATIC_URL }}css/base.css"/>
+
+        {% block head_extra %}{% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>

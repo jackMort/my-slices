@@ -1,3 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}MY-SLICES | share what you want.{% endblock %}
+
+{% block head_extra %}
+    <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.infinitescroll.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.masonry.min.js"></script>
+    <script src="{{ STATIC_URL }}js/application.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="content">
 {% for slice in slices %}
-    {{ slice.user }}, {{ slice.added_at }}, {{ slice.votes }}
+    {{ slice.render }}
 {% endfor %}
+</div>
+{% endblock %}

@@ -2,4 +2,5 @@
 *.swp
 my-slices-ve
 virtualenv.py
+slices/media
 slices/db.sqlite
