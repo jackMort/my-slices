@@ -2,3 +2,4 @@
 *.swp
 my-slices-ve
 virtualenv.py
+slices/db.sqlite
