@@ -47,7 +47,6 @@ App = function() {
         },
         masonry: function() {
             var masonry_options = {
-                columnWidth: 50,
                 itemSelector: '.slice', 
                 animate: true,
                 // saveOptions: false,

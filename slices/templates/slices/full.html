@@ -1,4 +1,4 @@
-<div id="{{ slice.id }}" class="slice slice-{{ slice.type_short_name }}">
+<div id="{{ slice.id }}" class="slice slice-{{ slice.type_short_name }} {% block extra_class %}{% endblock %}">
     <div class="header">
         <!--div class="actions" style="float: right">
             <a class="close" href="#">x</a>

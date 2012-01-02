@@ -1,0 +1,19 @@
+{% extends "slices/full.html" %}
+
+{% load thumbnail %}
+
+{% block extra_class %}
+    {% if not slice.description %}without-description{% endif %}
+{% endblock %}
+
+{% block content %}
+    <h4>{{ slice.title }}</h4>
+    <p>
+        {% if slice.image %}
+            <img src="{% thumbnail slice.image.image 150x120 crop upscale sharpen %}" alt="[]"/>
+        {% endif %}
+        {{ slice.description }}
+        <div class="clear"></div>
+    </p>
+    Source: <span class="source">{{ slice.url|urlizetrunc:50 }}</span>
+{% endblock %}

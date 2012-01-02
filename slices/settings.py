@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'templatetag_sugar',
 
     'slices.core',
+    'slices.types.link',
     'slices.types.image',
 )
 

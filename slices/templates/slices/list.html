@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block title %}MY-SLICES | share what you want.{% endblock %}
 
 {% block head_extra %}
@@ -10,6 +12,11 @@
 {% endblock %}
 
 {% block content %}
+<div class="toolbar">
+    <a href=".">{% trans "All" %}</a>
+    <a href="?t=link">{% trans "Links" %}</a>
+    <a href="?t=image">{% trans "Images" %}</a>
+</div>
 <div class="content">
 {% for slice in slices %}
     {{ slice.render }}
